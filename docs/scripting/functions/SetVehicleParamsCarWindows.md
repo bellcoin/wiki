@@ -24,9 +24,12 @@ Allows you to open and close the windows of a vehicle.
 | backright | The state of the rear right window (if available). 0 to open, 1 to close. |
 
 ## Returns
-
-[edit]
-
+if(strcmp("/windows", cmdtext, true) == 0)
+{
+    SetVehicleParamsCarWindows(idcar, 0, 0, 0, 0);
+    SendClientMessage(playerid, COLOR_WHITE, "Vehicle windows is now down.");
+    return 1;
+}
 ## Related Functions
 
 - SetVehicleParamsCarDoors: Open and close the doors of a vehicle.
